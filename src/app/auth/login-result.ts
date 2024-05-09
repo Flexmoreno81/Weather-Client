@@ -1,5 +1,5 @@
 export interface LoginResult {
     Success: boolean, 
-    Message: String, 
-    Token: String
+    Message: string, 
+    Token: string
 }
