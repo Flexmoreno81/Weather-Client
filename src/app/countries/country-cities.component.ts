@@ -29,7 +29,7 @@ export class CountryCitiesComponent {
     let idparameter = this.activatedRoute.snapshot.paramMap.get("id");
     this.id = idparameter ? + idparameter : 0;
 
-    this.http.get<City[]>(`${environment.baseUrl}api/Countries/CountryCities/${this.id}`).subscribe(
+    this.http.get<City[]>(`${environment.baseUrl}/api/Countries/CountryCities/${this.id}`).subscribe(
       {
         next: result => this.cities = result,
         error: error => console.log(error)

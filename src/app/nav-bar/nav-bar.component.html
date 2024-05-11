@@ -3,9 +3,19 @@
         <button mat-icon-button [routerLink]="['/']">
             <mat-icon>home</mat-icon>
         </button>
-  
+        
         <a mat-flat-button color="primary" [routerLink]="['/countries']">Countries</a>
-        <a mat-flat-button color="primary" [routerLink]="['/login']">Login</a>
         <span class="separator"></span>
+        @if(isLoggin) {
+            <a mat-flat-button color="primary" (click) = "onLogOut()">Log Out</a>
+        }
+
+        @else {
+            <a mat-flat-button color="primary" [routerLink]="['/login']">Login</a>
+        } 
+        
+        
+
+
     </mat-toolbar>
 </header> 
